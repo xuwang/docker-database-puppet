@@ -18,8 +18,8 @@ RUN librarian-puppet install && \
     chmod 777 /var/tmp/install && \
     mkdir /software
 
-COPY linuxamd64_12102_database_se2_1of2.zip /software/
-COPY linuxamd64_12102_database_se2_2of2.zip /software/
+COPY linuxamd64_12102_database_1of2.zip /software/
+COPY linuxamd64_12102_database_2of2.zip /software/
 
 RUN chmod -R 777 /software && \
     puppet apply /etc/puppet/site.pp --verbose --detailed-exitcodes || [ $? -eq 2 ] && \
