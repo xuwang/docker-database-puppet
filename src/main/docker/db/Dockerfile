@@ -2,7 +2,7 @@
 FROM oraclelinux:7
 
 RUN rpm --import https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs && \
-    rpm -ivh http://yum.puppetlabs.com/el/7/products/x86_64/puppetlabs-release-7-11.noarch.rpm && \
+    rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm && \
     yum -y install hostname.x86_64 rubygems ruby-devel gcc git unzip dos2unix && \
     echo "gem: --no-ri --no-rdoc" > ~/.gemrc && \
     yum install -y --skip-broken puppet tar && \
